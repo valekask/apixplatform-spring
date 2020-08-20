@@ -1,0 +1,137 @@
+#scatterplot {
+	position: absolute;
+	top: 3px;
+	left: 71px;
+	right: 6px;
+	bottom: 73px;
+}
+
+.scatterplotPanel {
+	position: absolute;
+	left: 1px;
+	bottom: 3px;
+	width: 95px;
+	height: 86px;
+	z-index: 1;
+	background-color: #f4f8fa;
+}
+
+.x-binding-dropdown, .y-binding-dropdown, .scatter-scale-reset {
+	line-height: 14px;
+	text-transform: none;
+	color: #888;
+	margin-bottom: 1px;
+}
+
+.x-binding-dropdown>select, .y-binding-dropdown>select, .scatter-scale-reset {
+	background: white;
+	border: 1px solid silver;
+}
+
+.x-binding-dropdown>select, .y-binding-dropdown>select {
+	padding: 1px 0;
+	width: 75px;
+}
+
+.x-binding-dropdown>label, .y-binding-dropdown>label {
+	width: 10px;
+}
+
+.y-binding-dropdown {
+	padding-top: 16px;
+}
+
+.scatter-scale-reset {
+	padding: 2px 0;
+	border-radius: 4px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.scatter-scale-reset>span {
+	margin-left: 5px;
+}
+
+#scatterplot .axis path, #scatterplot .axis line {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.1);
+  shape-rendering: crispEdges; }
+#scatterplot .axis text {
+  font-family: sans-serif;
+  font-total_participants: 13px;
+  fill: #666666; }
+
+#scatterplot circle {
+  fill-opacity: 0.75; }
+#scatterplot circle:hover {
+    fill-opacity: 0.9; }
+
+#scatterplot .plan_tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  font: 14px sans-serif;
+  background: rgba(245, 245, 245, 0.5);
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none; }
+
+#scatterplot .label {
+  font-family: sans-serif;
+  font-total_participants: 14px; }
+
+#scatterplot .title {
+  font-family: sans-serif;
+  font-total_participants: 18px;
+  font-weight: 600; }
+
+#scatterplot .zone {
+  fill: #e6f5fa;
+  fill-opacity: 0.4; }
+
+#scatterplot .zone-label {
+  font-family: sans-serif;
+  font-total_participants: 14px;
+  font-weight: 300;
+  fill: #c4c4c4; }
+
+#scatterplot .axis-line {
+  shape-rendering: crispEdges;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 2px;
+  fill: none; }
+
+#scatterplot .title {
+  font-size: 16px; }
+
+#scatterplot .subtitle {
+  font-size: 10px;
+  color: gray; }
+
+#scatterplot .sp-highlighter{
+  fill-opacity: 0.25;
+  stroke: teal;
+  stroke-width: 2px;
+}
+#ellipse-values {
+  font-size: 12px;
+  font-family: Arial;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+
+#scatterplot .callout.scatter text {
+	shape-rendering: crispEdges;
+	fill:white;
+	cursor: default;
+}
+
+#scatterplot .callout.scatter path {
+	fill-opacity: 0.5;
+}
+
+#scatterplot circle.node-selected {
+	stroke-width: 2px;
+	stroke: black !important;
+}

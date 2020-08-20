@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+.container{
+	height:100%;
+	overflow:hidden;
+}
+.axis text{
+	font-size:9px;
+	/*display:none;*/
+}
+div.scatterplotContainer{
+	padding:3px 1px;
+}
+.scatterplotContainer label.axis-option{
+	display:block;width:80px;
+	line-height:14px;text-transform:none;
+	font-size:9px;color:#666666;
+	background:white;
+	border:1px solid silver;
+	padding:0 0 0 2px;
+	font-weight:normal;
+}
+.scatterplotContainer label.axis-option select{
+	width:65px;margin:0;padding:0;
+	background:white;
+	font-size:11px;
+	
+}
+.scatterplotContainer label.axis-option.y{
+	margin-top:-75px;
+}
+.scatterplotContainer label.axis-option.x{
+}
+.scatterplotContainer label.scatter-scale-reset{
+	color:#666666;background:white;
+	font-size:11px;
+	cursor:pointer;
+	padding:1px 6px;
+	border:1px solid silver;
+	width:80px;
+	font-weight:normal;
+}
+
+#boxplot-x, #boxplot-y {
+	position:absolute;
+	overflow:hidden;
+}
+
+#boxplot-x{
+	left:71px;
+	right:5px;
+	bottom:3px;
+	height:70px;
+}
+
+#boxplot-y{
+	top:3px;
+	left:1px;
+	bottom:73px;
+	width:70px;
+	
+}
+text.x.label,text.y.label{
+	display:none;
+}
+.box {
+  font: 9px sans-serif;
+/*   cursor:pointer; */
+}
+
+.box line,
+.box rect,
+.box circle {
+  fill: #fff;
+ /* stroke: #000;*/
+  stroke-width: 1px;
+}
+text.box{
+	
+} 
+.box .center {
+  stroke-dasharray: 3,3;
+}
+
+.tick {
+  fill: #666666;
+  stroke: #000000;
+}
+.tick line{
+  stroke: #999999;
+  stroke-width: 1px;
+  stroke-dasharray: 3,1;
+}

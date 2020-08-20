@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>BOTW Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../botw/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../botw/css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="../botw/img/favicon.ico"/>
+    <link href="../botw/css/transportbar.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../botw/css/barchart.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../botw/css/boxplot.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../botw/css/scatterplot.css" rel="stylesheet" type="text/css" media="all" />   
+</head>
+<body>
+
+<div class="container">
+
+    <div class="content">
+        <div class="leftContainer">
+            <div class="panelContainer"></div>
+            <div class="reachableContainer"></div>
+            <div class="barChartContainer"></div>
+        </div>
+
+        <div class="centerContainer">
+            <div class="microstateContainer"></div>
+            <div class="buttonContainer"></div>
+        </div>
+
+        <div class="rightContainer">
+            <div class="scatterplotContainer">
+		<div class="scatterplotPanel"></div>
+	    </div>
+            <div class="macrostateContainer"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="popupContainer">
+            <ul id="popupMenu" class='popup'></ul>
+            <div id="logo">
+                <a href="http://www.fna.fi" title="www.fna.fi"><img width="30px" height="30px" src="../botw/img/fnaLogo.png"/></a>
+            </div>
+        </div>
+        <div class="transportBarContainer"></div>
+        <div class="controlBarContainer"></div>
+    </div>
+
+</div>
+
+
+<script data-main="../botw/js/config.js"  src="../botw/js/lib/require.js"></script>
+<script>
+    define("options", function() {
+        return {
+            dataProvider: {
+                categories: ['GDP','Prime','UE']
+            }
+//             scatterPlot:{
+//             	key_x:'Unemp',
+//             	key_y:'GDP'
+//             },
+//             boxPlot:{
+//             	key_x:'Unemp',
+//             	key_y:'GDP'
+//             }
+        }
+    })
+/**
+scatter options can be set as separate fields only:
+{   
+    scatterPlot:{key_x:'NE',key_y:'UE'},
+    boxPlot:{key_x:'NE',key_y:'UE'}	
+}	
+*/    
+</script>
+</body>
+</html>

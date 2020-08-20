@@ -1,0 +1,606 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body > * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ============ FLEXBOX CONTENT ============ */
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100%;
+    min-width: 1024px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+}
+/* ============ CONTAINERS ============ */
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    padding: 0 0 10px 0;
+}
+
+.leftContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0.35;
+}
+
+.centerContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+}
+
+.rightContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0.5;
+}
+
+/* ============ CHART AND PANELS ============ */
+.panelContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+}
+
+.microstateContainer {
+    flex: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    width: 99%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #DDE6F2;
+    border-top: 3px solid #EDF2F8;
+}
+
+.scatterplotContainer {
+    flex: 1;
+    /*width: 460px;*/
+    /*align-self: flex-end;*/
+    background-color: #f4f8fa;
+    border-color: #bce8f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 3px solid #bce8f1;
+    position: relative;
+}
+
+.reachableContainer {
+    /*flex: 0.6;*/
+    min-height: 56px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: #dff0d8;
+    border-right: 3px solid #468847;
+}
+
+.barChartContainer {
+    flex: 0.5;
+    border-right: 3px solid #BCBDDC;
+    background-color: #F4F2FA;
+    margin-top: 10px;
+}
+
+.macrostateContainer {
+    flex: 1;
+    background-color: #fcf8e3;
+    border-color: #c09853;
+    border-left: 3px solid #c09853;
+}
+
+.macrostateContainer, .scatterplotContainer {
+    text-transform: capitalize;
+}
+
+/* ============ FLEXBOX FOOTER PART ============ */
+.footer {
+    display: flex;
+    flex-flow: row;
+    min-height: 80px;
+    margin-top: auto;
+    padding: 0 10px 10px;
+}
+.footer > div {
+    margin: auto 10px;
+}
+.popupContainer {
+    align-self: center;
+    width: 30px;
+}
+
+.transportBarContainer {
+    flex: 1;
+}
+
+div.controlBarContainer {
+    margin: 20px 0 10px 0;
+    width: 330px;
+}
+
+/* ============ PANEL ============ */
+.panelContainer {
+    background-color: #f7f7f9;
+    border-color: #e1e1e8;
+    margin: 10px 0;
+    border-right: 3px solid #e1e1e8;
+}
+
+.panel {
+    display: block;
+    overflow-y: auto;
+
+    /* override bootstrap styles for panel. */
+    margin-bottom: 0;
+    background-color: inherit;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0 5px;
+}
+
+.property {
+    padding: 4px 0;
+    border-bottom: 1px solid white;
+}
+
+.property:hover {
+    padding: 4px 0;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #ededed
+}
+
+.property:first-line{
+font-weight:bold;
+}
+
+.subproperty {
+    padding-left: 10px;
+}
+
+.property .colored {
+	margin: 5px 0 ;
+}
+
+.property .coloredLabel {
+	height: auto;
+    margin-right: 10px;
+    float: left;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.property .coloredValue {
+	height: auto;
+}
+
+.property .coloredIcon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+    -webkit-box-shadow: 0 0 3px #B3B3B3;
+    display: inline-block;
+}
+
+.subproperty span.path-index {
+/* 	border:2px solid #a1a1a1; */
+/* 	padding:1px 4px; */
+/* 	margin:2px 0;  */
+/* 	--background:#dddddd; */
+/* 	--width:10px; */
+/* 	display:inline-block; */
+/* 	border-radius:25px; */
+	font-weight: bold;
+}
+
+/* ============ DIALOG ============ */
+.groupDialog {
+    display: none;
+    position: absolute;
+    width: 300px;
+    margin-left: -150px;
+    top: 13%;
+    left: 50%;
+}
+
+.groupDialog .modal-dialog {
+    width: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0;
+}
+
+.groupDialog .close {
+    margin-right: 6px;
+}
+
+.groupDialog .modal-body {
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 0;
+}
+
+.groupDialog .groupDesc {
+    height: auto;
+    display: inline-block;
+    margin-left: 17px;
+}
+
+.groupDialog .groupDist {
+	height: auto;
+    margin-left: 10px;
+    float: right;
+    display: inline-block;
+}
+
+.groupDialog label {
+    color: #B3B3B3;
+}
+ 
+.groupDialog .groupDesc label {
+    border-bottom: 1px solid #B3B3B3;
+}
+
+.groupDialog .groupIcon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    -webkit-box-shadow: 0 0 3px #B3B3B3;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.groupDialog .modal-footer {
+    border-top: none;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.groupDialog .selectedGroup label {
+    color: #3276b1;
+}
+
+.groupDialog .selectedGroup .groupIcon {
+    border: 2px solid #2F4F4F;
+}
+
+/* ============ COMMON ============ */
+.border_none{border:none !important;}
+
+.cl_b{clear:both;}
+
+.cl_b_none{clear:both;height:0px;}
+
+.cl_b_free{clear:both;height:20px;margin-bottom:-20px;}
+
+.cl_r{clear:right !important;}
+
+.fl_left{float:left !important;}
+
+.fl_right{float:right !important;}
+
+.marg_0{margin:0 !important;}
+
+.marg_bot_8{margin-bottom:8px !important;}
+
+.marg_left_54{margin-left:54px !important;}
+
+.pad_0{padding:0 !important;}
+
+.pad_left_20{padding-left:20px !important;}
+
+.pad_bot_10{padding-bottom:10px !important;}
+
+.pad_bot_20{padding-bottom:20px !important;}
+
+.pad_top_10{padding-top:10px !important;}
+
+.pad_top_20{padding-top:20px !important;}
+
+.text_al_center{text-align:center !important;}
+
+.text_bold{font-weight:bold;}
+
+
+/* ============ GROUP COLORS ============ */
+.g1 {
+    fill: #0080FF;
+    stroke: #0080FF;
+    background-color: #0080FF;
+}
+.g2 {
+    fill: #00FF00;
+    stroke: #00FF00;
+    background-color: #00FF00;
+}
+.g3 {
+    fill: #FFFF00;
+    stroke: #FFFF00;
+    background-color: #FFFF00;
+}
+.g4 {
+    fill: #D2691E;
+    stroke: #D2691E;
+    background-color: #D2691E;
+}
+.g5 {
+    fill: #FF0000;
+    stroke: #FF0000;
+    background-color: #FF0000;
+}
+.g6 {
+    fill: #8000FF;
+    stroke: #8000FF;
+    background-color: #8000FF;
+}
+.g7 {
+    fill: #B3DE69;
+    stroke: #B3DE69;
+    background-color: #B3DE69;
+}
+.g8 {
+    fill: #FCCDE5;
+    stroke: #FCCDE5;
+    background-color: #FCCDE5;
+}
+.g9 {
+    fill: #D9D9D9;
+    stroke: #D9D9D9;
+    background-color: #D9D9D9;
+}
+.g10 {
+    fill: #BC80BD;
+    stroke: #BC80BD;
+    background-color: #BC80BD;
+}
+.g11 {
+    fill: #CCEBC5;
+    stroke: #CCEBC5;
+    background-color: #CCEBC5;
+}
+.g12 {
+    fill: #FFFFB3;
+    stroke: #FFFFB3;
+    background-color: #FFFFB3;
+}
+
+/* ============ REACHABLE RANGES ============ */
+
+.reachableContainer .reachable {
+    width: 100%;
+    padding: 10px;
+}
+.reachableContainer:hover {
+    background-color:#d6e9c6;
+}
+
+.reachableContainer .stepRangeContainer {
+    position: relative;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.reachableContainer .probRangeContainer {
+    position: relative;
+    width: 90%;
+}
+
+.reachableContainer input[type="range"] {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 90%;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.reachableContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #444;
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.reachableContainer .rangeTooltip {
+    position: absolute;
+    display: inline-block;
+    top: -12px;
+    left: 97%;
+    font-weight: bold;
+    color: #468847;
+}
+
+.reachableContainer .textLabel {
+    position:absolute;
+    display:inline-block;
+    top: -6px;
+    left: 2px;
+}
+
+/* ============ BARCHART ============ */
+.barChartContainer .axis path {
+    stroke: rgba(0,0,0, 0.4);
+    shape-rendering: auto;
+}
+
+.barChartContainer .serie .bar {
+    fill-opacity: .8;
+    stroke-opacity: .8;
+}
+
+.barChartContainer .serie .negative {
+    fill-opacity: .4;
+    stroke-opacity: .4;
+}
+
+.barChartContainer .serie text.label {
+    font-size: 10px;
+}
+
+.barChartContainer .serie text.percentLabel {
+    font-size: 9px;
+}
+
+/* ============ BUTTONS ============ */
+.buttonContainer .switcherNodesLabels {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.buttonContainer input[type=checkbox] {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.buttonContainer input[type=checkbox] + label {
+    padding-left:20px;
+    display:inline-block;
+    line-height:15px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:12px;
+    vertical-align:middle;
+    cursor:pointer;
+    background-image:url(../img/lite-red-check.png);
+}
+
+
+.buttonContainer input[type=checkbox]:checked + label {
+    background-position: 0 -15px;
+}
+
+.buttonContainer .icon {
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    margin-left: 4px;
+}
+
+.buttonContainer .icon-switcherSl {
+    display: inline-block;
+    width: 24px;
+    height: 21px;
+    margin-left: 4px;
+    background-image:url(../img/loop_icon.png);
+}
+
+/* ============ DROPDOWN ============ */
+.dropdown label {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.dropdown select {
+    padding:3px;
+    margin-left: 5px;
+    border-radius:4px;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    font-size: 12px;
+}
+/* ============ BUTTON ============ */
+.buttonContainer .button button {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-image:url(../img/target2.png);
+    background-color: transparent;
+}
+
+.buttonContainer .button button:hover {
+    background-color: transparent;
+}
+
+/* ============ NODES ============ */
+.node-selected circle{
+	stroke-width: 2px;
+	stroke: black !important;
+}
+
+.node:hover {
+	cursor:pointer;
+}
+
+/* ============ LINKS ============ */
+
+.linkGroup path {
+    fill:none;
+}
+
+.linkGroup path.area:hover {
+	cursor:pointer;
+}
+
+/* ============ LABELS ============ */
+.macrostateContainer .linkGroup text {
+    font-size: 10px;
+}
+
+.callout.microstate path, .callout.macrostate path {
+	fill-opacity: 0.5;
+}
+
+.callout.microstate text, .callout.macrostate text {
+	font-size: 14px;
+	fill: #fff;
+	stroke-width: 0px;
+	cursor: default;
+}
+
+/* ============ BRUSH KNOB ============ */
+.brush .knob .callout text {
+    font-size: 11px;
+}
+.brush .knob .callout path {
+    fill: #444;
+    stroke: #444;
+}
+.brush .knob.brushKnobStart.stopped .callout text {
+    font-size: 14px;
+}
+.brush .knob.brushKnobStart.stopped .callout path {
+    fill: inherit;
+    stroke: inherit;
+}
