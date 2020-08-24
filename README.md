@@ -10,7 +10,7 @@ Backend Sprint-Boot Application for Apix G20TechSprint
 
 2.  Change the terminal directory to `apixplatform-spring` folder
 
-        cd microlending-backend/
+        cd apixplatform-spring/
 
 3. Start the backend server
 
