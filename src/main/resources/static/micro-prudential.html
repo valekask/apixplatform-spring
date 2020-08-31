@@ -4,14 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, viewport-fit=cover, width=device-width">
-		<title>G20 | Micro Prudential</title>
+		<title>FNA Global Monitor | Microprudential</title>
 		<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&display=swap" rel="stylesheet">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/uikit.min.css"/>
-		<link rel="stylesheet" href="css/normalize.css"/>
-		<link rel="stylesheet" href="css/main.css"/>
-		<script src="js/uikit.min.js"></script>
-		<script src="js/uikit-icons.min.js"></script>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./css/uikit.min.css"/>
+		<link rel="stylesheet" href="./css/normalize.css"/>
+		<link rel="stylesheet" href="./css/main.css"/>
+		<script defer src="./js/uikit.min.js"></script>
+		<script defer src="./js/uikit-icons.min.js"></script>
+		<script async src="./js/monitors.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25676200-5"></script>
+		<script async src="./js/ga.js"></script>
 	</head>
 <body>
 	<header id="header">
@@ -56,177 +59,137 @@
 		<div class="uk-container container-two">
 			<ul class="uk-breadcrumb">
 				<li><a href="./home.html">SupTech</a></li>
-				<li><a href="./home.html">Data analytics</a></li>
-				<li><span> Micro Prudential</span></li>
+				<li><a href="./home.html">Monitors</a></li>
+				<li><span> Microprudential</span></li>
 			</ul>
 			<hr class="no-margin-b">
 			<div class="uk-flex title-intro no-margin-top">
 				<span class="m-p-ico"><img src="./img/network-search.svg"></span>
-				<h3>Micro Prudential</h3>
+				<h3>Microprudential</h3>
 			</div>
+			<ul class="other-tab filter-monitors" uk-tab>
+				<li><a data-filter="all" href="#">DASHBOARDS</a></li>
+				<li><a data-filter="credit-risk" href="#">Credit risk</a></li>
+				<li><a data-filter="liquidity-risk" href="#">Liquidity risk</a></li>
+				<li><a data-filter="market-risk" href="#">Market risk</a></li>
+				<li><a data-filter="operational-risk" href="#">Operational risk</a></li>
+				<li><a data-filter="governance" href="#">Governance</a></li>
+			</ul>
 				<div>
-					<div class="uk-child-width-1-4@l uk-child-width-1-2@s" uk-grid>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom title-height-source">CCP Interconnectedness & Simulation - Liquidty & Operational Risk</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/ccp-interconnectedness-simulation.jpg"></div>
-									<article>
-										<p class="txt ellipsis">Unveils the topology of the global clearing system by using publicly available data on clearing memberships.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">CCP</div> 
-										<div class="uk-label tag">Clearing</div>
-										<div class="uk-label tag">Disruptions</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/CCP-Interconnectedness-and-Simulation/overview" target="_blank" type="button">View live monitor</a>
+					<div class="monitor-category-grid">
+						<article class="category" data-category="liquidity-risk operational-risk">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>CCP Interconnectedness & Simulation</h3>
+									<div class="icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/ccp-interconnectedness-simulation.jpg"></div>
+									<p class="txt">Monitor the topology of the global clearing system and related interconnectedness by using publicly available data on clearinghouse memberships.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>CCP</li> 
+										<li>Clearing</li>
+										<li>Disruptions</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca2/#/g20techsprint1/CCP-Interconnectedness-and-Simulation/global_clearing_network" target="_blank" type="button">View monitor</a>
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom">LEI Level 2 - Credit Risk</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/lei.jpg"></div>
-									<article>
-										<p class="txt ellipsis">The LEI level 2 dataset provides the answer to the question 'who owns whom'" for legal entities that are part of the LEI dataset.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">LEI</div> 
-										<div class="uk-label tag">Ownership</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/LEI-Level-2/overview" target="_blank" type="button">View live monitor</a>
+						</article>
+						<article class="category" data-category="credit-risk">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>LEI Level 2</h3>
+									<div class="icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/lei.jpg"></div>
+									<p class="txt">The LEI level 2 monitor provides for easy understanding of 'who owns whom'" for legal entities that are part of the LEI dataset.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>LEI</li> 
+										<li>Ownership</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca2/#/g20techsprint1/LEI-Level-2/lei_kg" target="_blank" type="button">View monitor</a>
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom">Related Parties Analysis - Governance</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/related-parties.jpg"></div>
-									<article>
-										<p class="txt ellipsis">Investigate related parties and company-director networks.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">Related parties</div> 
-										<div class="uk-label tag">AML</div>
-										<div class="uk-label tag">CFT</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/Related-Parties-Analysis/overview" target="_blank" type="button">View live monitor</a>
+						</article>
+						<article class="category" data-category="governance">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>Related Parties Analysis</h3>
+									<div class="icon" uk-tooltip="title: Snapshot; pos: bottom"><img class="camera" src="./img/camera.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/related-parties.jpg"></div>
+									<p class="txt">Investigate related parties and company-director networks.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>Related parties</li> 
+										<li>AML</li>
+										<li>CFT</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca2/#/g20techsprint1/Related-Parties-Analysis/cambridge_analytica" target="_blank" type="button">View demo</a>
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom">Global Markets - Market Risk</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/global-markets.jpg"></div>
-									<article>
-										<p class="txt ellipsis">Monitor global markets and correlation networks across assets classes and regions for gaining a systemic view on recent developments, and for building stress tests.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">Markets</div> 
-										<div class="uk-label tag">Correlation</div>
-										<div class="uk-label tag">Outliers</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/Global-Markets/overview" target="_blank" type="button">View live monitor</a>
+						</article>
+						<article class="category" data-category="market-risk">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>Global Markets</h3>
+									<div class="icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/global-markets.jpg"></div>
+									<p class="txt">Monitor global markets and correlation networks across asset classes and regions to gain a systemic view of recent developments, and to build stress tests.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>Markets</li> 
+										<li>Correlation</li>
+										<li>Outliers</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca/#/g20techsprint1/Global-Markets/xasset" target="_blank" type="button">View monitor</a>
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom">Bank Payment Behavior - Credit, Liquidity & Operational Risk</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/bank-payment.jpg"></div>
-									<article>
-										<p class="txt ellipsis">Use real-time interbank payments data to draw conclusions about liquidity and solvency of banks.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">Banking</div> 
-										<div class="uk-label tag">Payments</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/Bank-Payment-Behaviour/overview" target="_blank" type="button">View live monitor</a>
+						</article>
+						<article class="category" data-category="credit-risk liquidity-risk operational-risk">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>Bank Payment Behavior</h3>
+									<div class="icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/bank-payment.jpg"></div>
+									<p class="txt">Use real-time interbank payments data to draw conclusions and early warning signals about liquidity and solvency of banks.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>Banking</li> 
+										<li>Payments</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca2/#/g20techsprint1/Bank-Payment-Behaviour/bank_payment_behavior" target="_blank" type="button">View demo</a>
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="uk-card uk-card-default dash-box">
-								<div class="uk-card-header">
-									<div class="uk-grid-small uk-flex-middle" uk-grid>
-										<div class="uk-width-expand">
-											<h3 style="height: auto;" class="uk-card-title uk-margin-remove-bottom">Granular Loan Data - Credit Risk</h3>
-											<div class="uk-card-badge icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
-										</div>
-									</div>
-								</div>
-								<div class="uk-card-body dash-body">
-									<div class="dash-box-img"><img alt="" src="./img/granular-loan.jpg"></div>
-									<article>
-										<p class="txt ellipsis">Carry out ad hoc investigations or monitor unobvious credit concentrations from granular loan level data.</p>
-									</article>
-									<hr class="line-xs">
-									<div class="tags">
-										<div class="uk-label tag">Corporate loans</div> 
-										<div class="uk-label tag">Residential mortgage</div>
-										<div class="uk-label tag">Concentrations</div>
-										<div class="uk-label tag">Financial stability</div>
-									</div>
-								</div>
-								<div class="uk-card-footer padd">
-									<a class="btn-primary box-btn" href="https://g20.fnalab.com/workspace/g20techsprint1/Granular-Loan-Data/overview" target="_blank" type="button">View live monitor</a>
+						</article>
+						<article class="category" data-category="credit-risk">
+							<div class="uk-card uk-card-default">
+								<header>
+									<h3>Granular Loan Data</h3>
+									<div class="icon" uk-tooltip="title: Daily; pos: bottom"><img src="./img/clock.svg"></div>
+								</header>
+								<div class="cat-body">
+									<div class="image"><img alt="" loading="lazy" src="./img/granular-loan.jpg"></div>
+									<p class="txt">Monitor non-obvious credit risk concentrations and carry out investigations from granular loan level data.</p>
+									<div class="line"></div>
+									<ul class="tags">
+										<li>Corporate loans</li> 
+										<li>Residential mortgage</li>
+										<li>Concentrations</li>
+										<li>Financial stability</li>
+									</ul>
+									<a class="btn-primary box-btn" href="https://g20.fnalab.com/ca2/#/g20techsprint1/Granular-Loan-Data/loan_kg" target="_blank" type="button">View demo</a>
 								</div>
 							</div>
-						</div>
+						</article>
 					</div>
 				</div>
 			</div>
@@ -249,16 +212,5 @@
 			</div>
 			<small class="copyright">Copyright © FNA 2020</small>
 		</footer>
-		<script>
-			const titleSameHeight = () => {
-				const title = document.body.querySelector('.title-height-source');
-				const otherNodes = document.body.querySelectorAll('.uk-card-title');
-
-				otherNodes.forEach(e => e.setAttribute('style', 'height: ' + title.offsetHeight + 'px'));
-			}
-
-			document.addEventListener('DOMContentLoaded', titleSameHeight);
-			window.addEventListener('resize', titleSameHeight);
-		</script>
 	</body>
 </html>

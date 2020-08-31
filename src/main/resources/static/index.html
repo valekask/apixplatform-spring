@@ -4,14 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, viewport-fit=cover, width=device-width">
-		<title>G20</title>
+		<title>FNA Global Monitor</title>
 		<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&display=swap" rel="stylesheet">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/uikit.min.css"/>
-		<link rel="stylesheet" href="css/normalize.css"/>
-		<link rel="stylesheet" href="css/main.css"/>
-		<script src="js/uikit.min.js"></script>
-		<script src="js/uikit-icons.min.js"></script>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./css/uikit.min.css"/>
+		<link rel="stylesheet" href="./css/normalize.css"/>
+		<link rel="stylesheet" href="./css/main.css"/>
+		<script defer src="./js/uikit.min.js"></script>
+		<script defer src="./js/uikit-icons.min.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25676200-5"></script>
+		<script async src="./js/ga.js"></script>
 	</head>
 	<body>
 		<div id="landing">
@@ -23,8 +25,8 @@
 					</div>
 					<div class="main-txt uk-container">
 						<h1 class="main-margin-title"><span class="main-title">Welcome to the Global Financial System Monitor</span></h1>
-						<h2 class="main-margin-title-2">10 monitors containing 30+ live, interactive dashboards to explore and monitor the global financial system</h2>
-						<button class="btn-primary main-btn" onclick="window.open('./home.html')" type="button">Enter</button>
+						<h2 class="main-margin-title-2">10 monitors containing 30+ interactive dashboards to explore and monitor the global financial system</h2>
+						<button class="btn-primary main-btn" onclick="window.open('./home.html', '_self')" type="button">Enter</button>
 					</div>
 				</div>
 				<div class="uk-height-medium bg-h uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="img/bg.jpg" uk-img></div>
@@ -36,12 +38,13 @@
 						<div class="p-d">
 							<h3 class="m-b-cero">Working with G20</h3>
 							<img class="line" data-src="img/line.svg" alt="" uk-img>
-							<p>The Global Financial System Monitor, built by FNA, enables financial authorities, financial market infrastructures and financial institutions to rapidly respond to the impact of local and systemic disruptions.</html>p></p>
-							<p>This platform has been designed to provide instant access to a range of monitors and simulations that will facilitate stronger coordination amongst regulatory and supervisory agencies, and support them in formulating and implementing coordinated cross-jurisdictional responses to systemic risks, especially at the time of unprecedented disruptions from the COVID-19 crisis.</p>
-							<button class="btn-primary" onclick="window.open('./about-fna.html', '_self')" type="button">Read more +</button>
+							<p>The Global Financial System Monitor has been built by FNA as a response to the G20 challenge for <b>Dynamic Information sharing for Supervisors and Regulators in Response to Crises</b>. The application sources both structured and unstructured publicly available information relevant to the stability of the financial system, and displays these information and accompanying analytics and modelling in a set of Monitors.</p>
+
+							<p>The application has been designed to provide instant access to a range of data and analysis across all Suptech areas of application. We believe that this will facilitate stronger coordination amongst regulatory and supervisory agencies, and will support them in formulating and implementing coordinated cross-jurisdictional responses to systemic risks, especially at the time of unprecedented disruptions from the COVID-19 crisis.</p>
+							<button class="btn-primary" onclick="window.open('./home.html', '_self')" type="button">Enter</button>
 						</div>
-						<div>
-							<img class="" data-src="img/world.jpg" alt="" uk-img>
+						<div class="image-home rtl">
+							<img alt="" loading="lazy" src="./img/world-1x.jpg" srcset="./img/world-1x.jpg 1x, ./img/world-2x.jpg 2x">
 						</div>
 					</div>
 				</div>
@@ -51,8 +54,8 @@
 				<div class="uk-container">
 					<div class="uk-child-width-expand@s" uk-grid>
 
-						<div>
-							<img class="" data-src="img/why-monitor-financial-networks.jpg" alt="" uk-img>
+						<div class="image-home">
+							<img alt="" loading="lazy" src="./img/why-monitor-financial-networks-1x.jpg" srcset="./img/why-monitor-financial-networks-1x.jpg 1x, ./img/why-monitor-financial-networks-2x.jpg 2x">
 						</div>
 
 						<div class="p-d-l">
@@ -73,13 +76,13 @@
 						<div class="p-d">
 							<h3 class="m-b-cero">About FNA</h3>
 							<img class="line" data-src="img/line.svg" alt="" uk-img>
-							<p>Financial Network Analytics (FNA) is a deep technology company and award-winning leader in Regulatory Technology (Regtech) and Supervisory Technology (Suptech).  FNA combines industry leading data science capabilities with deep business domain expertise.</p>
-							<p>The FNA platform allows financial regulators and FMIs to map and monitor complex financial networks and to simulate operational and financial risks. FNA’s clients include the world’s largest central banks, supervisors and financial market infrastructures.</p>
+							<p>Financial Network Analytics (FNA) is a deep technology company and award-winning leader in Regulatory Technology (Regtech) and Supervisory Technology (Suptech). FNA combines industry leading data science capabilities with deep central banking and supervisory expertise.</p>
+							<p>The FNA Platform allows financial authorities to map and monitor complex financial networks and to simulate operational and financial risks. FNA’s clients include the world’s largest central banks, supervisors, GSIBs and financial market infrastructures.</p>
 							<p>FNA’s mission is to make the financial system safer and more efficient.</p>
-							<button class="btn-primary" onclick="window.open('./home.html', '_self')" type="button">Enter</button>
+							<button class="btn-primary" onclick="window.open('./about-fna.html', '_self')" type="button">Read More +</button>
 						</div>
-						<div>
-							<img class="" data-src="img/world-connection.jpg" alt="" uk-img>
+						<div class="image-home rtl">
+							<img alt="" loading="lazy" src="./img/world-connection-1x.jpg" srcset="./img/world-connection-1x.jpg 1x, ./img/world-connection-2x.jpg 2x">
 						</div>
 					</div>
 				</div>

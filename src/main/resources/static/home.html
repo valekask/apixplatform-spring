@@ -4,14 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, viewport-fit=cover, width=device-width">
-		<title>G20 | Home</title>
+		<title>FNA Global Monitor | Monitors</title>
 		<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&display=swap" rel="stylesheet">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/uikit.min.css"/>
-		<link rel="stylesheet" href="css/normalize.css"/>
-		<link rel="stylesheet" href="css/main.css"/>
-		<script src="js/uikit.min.js"></script>
-		<script src="js/uikit-icons.min.js"></script>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./css/uikit.min.css"/>
+		<link rel="stylesheet" href="./css/normalize.css"/>
+		<link rel="stylesheet" href="./css/main.css"/>
+		<script defer src="./js/uikit.min.js"></script>
+		<script defer src="./js/uikit-icons.min.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25676200-5"></script>
+		<script async src="./js/ga.js"></script>
 	</head>
 	<body>
 	<header id="header">
@@ -58,36 +60,22 @@
 					<span class="m-p-ico">
 						<img src="img/house-chimney.svg">
 					</span>
-					<h3>Welcome to the Global Financial System Monitor</h3>
+					<h3>Global Financial System Monitor</h3>
 				</div>
-				<p>To view any of our interactive monitors, choose a category below (based on BIS’s standard Suptech taxonomy), and select a topic.</p>
 				<div>
 					<ul class="other-tab" uk-tab="swiping: false" uk-tab>
-						<li class="uk-active"><a href="#" target="_blank">SupTech</a></li>
+						<li class="uk-active"><a href="#" target="_blank">MONITORS</a></li>
 					</ul>
-					<ul class="uk-switcher">
+					<ul class="uk-switcher data-analytics">
 						<li class="uk-active">
-							<div class="uk-child-width-1-5@l" uk-grid>
-								<div>
-									<div class="uk-card uk-card-body box-card selected">
-										<a href="#">
-											<p>
-												<img class="box-icon" data-src="img/data.svg" alt="" uk-img> 
-												<span class="title-box">Data analytics</span> 
-												<span class="number-box uk-align-right"><span class="number">18</span></span>
-											</p>
-										</a>
-									</div>
-								</div>
+							<div class="uk-child-width-1-4@m" uk-grid>
 								<div class="boxpadding-l">
 									<div class="uk-card uk-card-body uk-card-hover box-card sub">
 										<button class="open-modal" uk-toggle="target: #modal-soon" type="button">
 											<p>
 												<img class="box-icon" data-src="img/market.svg" alt="" uk-img> 
 												<span class="title-box sub">Market surveillance</span> 
-												<span class="number-box uk-align-right" uk-tooltip="title: Coming soon; pos: bottom">
-													<span class="number ico-i"><span uk-icon="info"></span></span>
-												</span>
+												<span class="number-box none uk-align-right"><span class="number">0</span></span>
 											</p>
 										</button>
 									</div>
@@ -101,17 +89,13 @@
 									<div class="uk-card uk-card-body uk-card-hover box-card sub-item">
 										<ul class="uk-nav uk-dropdown-nav ">
 											<li>
-												<a href="#">
-													<span class="title-box sub-item">Manipulation</span>
-													<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
-												</a>
+												<span class="title-box sub-item">Manipulation</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="#">
-													<span class="title-box sub-item">Insider trading</span>
-													<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
-												</a>
+												<span class="title-box sub-item">Insider trading</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 										</ul>
 									</div>
@@ -129,24 +113,20 @@
 									<div class="uk-card uk-card-body uk-card-hover box-card sub-item">
 										<ul class="uk-nav uk-dropdown-nav ">
 											<li>
-												<a href="./misconduct-analysis.html">
+												<a href="./misconduct-analysis.html?f=aml-cft">
 													<span class="title-box sub-item">AML/CFT</span>
 													<span class="number-box sub uk-align-right"><span class="number">2</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./misconduct-analysis.html">
-													<span class="title-box sub-item">Fraud</span>
-													<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
-												</a>
+												<span class="title-box sub-item">Fraud</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./misconduct-analysis.html">
-													<span class="title-box sub-item">Mis-selling</span>
-													<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
-												</a>
+												<span class="title-box sub-item">Mis-selling</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 										</ul>
 									</div>
@@ -156,7 +136,7 @@
 										<a href="./micro-prudential.html">
 											<p>
 												<img class="box-icon" data-src="img/bank.svg" alt="" uk-img> 
-												<span class="title-box sub">Micro prudential</span> 
+												<span class="title-box sub">Microprudential</span> 
 												<span class="number-box uk-align-right"><span class="number">9</span></span>
 											</p>
 										</a>
@@ -164,28 +144,28 @@
 									<div class="uk-card uk-card-body uk-card-hover box-card sub-item">
 										<ul class="uk-nav uk-dropdown-nav ">
 											<li>
-												<a href="./micro-prudential.html">
+												<a href="./micro-prudential.html?f=credit-risk">
 													<span class="title-box sub-item">Credit risk</span>
 													<span class="number-box sub uk-align-right"><span class="number">3</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./micro-prudential.html">
+												<a href="./micro-prudential.html?f=liquidity-risk">
 													<span class="title-box sub-item">Liquidity risk</span>
 													<span class="number-box sub uk-align-right"><span class="number">2</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./micro-prudential.html">
+												<a href="./micro-prudential.html?f=market-risk">
 													<span class="title-box sub-item">Market risk</span>
 													<span class="number-box sub uk-align-right"><span class="number">1</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./micro-prudential.html">
+												<a href="./micro-prudential.html?f=operational-risk">
 													<span class="title-box sub-item">Operational risk</span>
 													<span class="number-box sub uk-align-right"><span class="number">2</span>
 													</span>
@@ -193,7 +173,7 @@
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./micro-prudential.html">
+												<a href="./micro-prudential.html?f=governance">
 													<span class="title-box sub-item">Governance</span>
 													<span class="number-box sub uk-align-right"><span class="number">1</span>
 													</span>
@@ -207,50 +187,35 @@
 										<a href="./macro-prudential.html">
 											<p>
 												<img class="box-icon" data-src="img/macro.svg" alt="" uk-img> 
-												<span class="title-box sub">Macro prudential</span> 
+												<span class="title-box sub">Macroprudential</span> 
 												<span class="number-box uk-align-right"><span class="number">7</span></span>
 											</p>
 										</a>
 									</div>
-
 									<div class="uk-card uk-card-body uk-card-hover box-card sub-item">
-										
 										<ul class="uk-nav uk-dropdown-nav ">
-											
 											<li>
-												<a href="./macro-prudential.html">
-													<span class="title-box sub-item">Forecasting</span>
-													<span class="number-box sub none uk-align-right">
-														<span class="number">0</span>
-													</span>
-												</a>
+												<span class="title-box sub-item">Forecasting</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./macro-prudential.html">
+												<a href="./macro-prudential.html?f=emerging-risk-signaling">
 													<span class="title-box sub-item">Emerging risk signaling</span>
-													<span class="number-box sub uk-align-right">
-														<span class="number">4</span>
-													</span>
+													<span class="number-box sub uk-align-right"><span class="number">4</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./macro-prudential.html">
-													<span class="title-box sub-item">Finalcial stability</span>
-													<span class="number-box sub uk-align-right">
-														<span class="number">3</span>
-													</span>
+												<a href="./macro-prudential.html?f=financial-stability">
+													<span class="title-box sub-item">Financial stability</span>
+													<span class="number-box sub uk-align-right"><span class="number">3</span></span>
 												</a>
 											</li>
 											<li class="uk-nav-divider"></li>
 											<li>
-												<a href="./macro-prudential.html">
-													<span class="title-box sub-item">Policy evaluation</span>
-													<span class="number-box sub none uk-align-right">
-														<span class="number">0</span>
-													</span>
-												</a>
+												<span class="title-box sub-item">Policy evaluation</span>
+												<span class="number-box sub none uk-align-right"><span class="number">0</span></span>
 											</li>
 										</ul>
 										
